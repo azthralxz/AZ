@@ -1,41 +1,131 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>ถึงคนพิเศษของเรา 💖</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(#ffe6f0, #fff);
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #ff4d88;
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.5em;
-    }
-    .heart {
-      font-size: 4em;
-      animation: beat 1s infinite;
-    }
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>ให้กำลังใจรุ่นน้องที่เราแอบชอบ 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(#ffe6f0, #fff);
+  text-align: center;
+}
+
+/* หน้าทั้งหมด */
+.page {
+  display: none;
+  padding: 50px;
+}
+
+/* หน้าโหลด */
+#loading {
+  display: block;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  font-size: 4em;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+button {
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+button:hover {
+  background: #ff2f73;
+}
+
+.cartoon {
+  font-size: 5em;
+}
+
+p {
+  font-size: 1.4em;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="heart">❤️</div>
-  <h1>เซอร์ไพรส์!</h1>
+<!-- 🎵 เพลง -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/03/audio_8d6e7b5a3c.mp3?filename=soft-piano-ambient-113694.mp3">
+</audio>
+
+<!-- หน้าโหลด -->
+<div id="loading" class="page">
+  <div class="loader">🐰</div>
+  <h2>กำลังเตรียมความรู้สึกดี ๆ ให้เธอ…</h2>
+</div>
+
+<!-- หน้า 1 -->
+<div id="page1" class="page">
+  <div class="cartoon">🌸</div>
+  <h1>ให้กำลังใจรุ่นน้องที่เราแอบชอบ</h1>
   <p>
-    เว็บนี้ทำขึ้นมาเพื่อเธอคนเดียว 🥰<br>
-    ขอบคุณที่อยู่ด้วยกันเสมอ<br><br>
-    รักนะ 💕
+    ไม่รู้ว่าเธอจะได้อ่านมันตอนไหน  
+    แต่เราอยากให้เธอรู้ว่า  
+    เธอเก่งมากแล้วนะ 💖
   </p>
+  <button onclick="nextPage(2)">กดไปหน้าถัดไป 👉</button>
+</div>
+
+<!-- หน้า 2 -->
+<div id="page2" class="page">
+  <div class="cartoon">🐻</div>
+  <p>
+    ถ้าวันไหนเหนื่อย  
+    ถ้าวันไหนท้อ  
+    อย่าลืมว่ามีใครบางคน  
+    แอบเอาใจช่วยเธออยู่เสมอ 🌷
+  </p>
+  <button onclick="nextPage(3)">ไปต่ออีกนิด 💕</button>
+</div>
+
+<!-- หน้า 3 -->
+<div id="page3" class="page">
+  <div class="cartoon">⭐</div>
+  <p>
+    เว็บนี้ไม่ได้อยากให้อ่านแค่ครั้งเดียว  
+    แต่อยากให้เก็บไว้  
+    เป็นความทรงจำเล็ก ๆ  
+    ที่เปิดมาแล้วรู้สึกดี 😊
+  </p>
+  <p>
+    ขอให้เธอเจอแต่เรื่องดี ๆ  
+    ในทุกวันที่เดินไปข้างหน้า 💖
+  </p>
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("page1").style.display = "block";
+}, 2500);
+
+function nextPage(n) {
+  document.querySelectorAll('.page').forEach(p => p.style.display = "none");
+  document.getElementById("page" + n).style.display = "block";
+}
+</script>
 
 </body>
 </html>
