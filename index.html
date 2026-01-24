@@ -2,130 +2,112 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>ให้กำลังใจรุ่นน้องที่เราแอบชอบ 💖</title>
+<title>กำลังใจเล็ก ๆ จากคนแอบชอบ 💖</title>
 
 <style>
+/* รีเซ็ตพื้นฐาน */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ฟอนต์ + Theme สีหวาน */
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(#ffe6f0, #fff);
+  font-family: 'Kanit', sans-serif;
+  background: #fff8fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout กล่อง */
+.section {
+  padding: 80px 20px;
   text-align: center;
 }
 
-/* หน้าทั้งหมด */
-.page {
-  display: none;
-  padding: 50px;
+/* ตัวใหญ่ ๆ ให้เด่นเหมือนเว็บตัวอย่าง */
+h1 {
+  font-size: 3em;
+  color: #ff4d88;
 }
 
-/* หน้าโหลด */
-#loading {
-  display: block;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  font-size: 4em;
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-button {
-  background: #ff4d88;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border-radius: 30px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-button:hover {
-  background: #ff2f73;
-}
-
-.cartoon {
-  font-size: 5em;
+h2 {
+  font-size: 2em;
+  color: #ff4d88;
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1.3em;
+  margin-top: 12px;
+  color: #444;
 }
+
+/* ปุ่มสไตล์สดใส */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ff4d88;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 1.2em;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2f73;
+}
+
+/* Cartoon / รูปใหญ่ */
+.cartoon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+/* Section พิเศษ */
+#section1 { background: #ffe6f0; }
+#section2 { background: #fff; }
+#section3 { background: #ffe6fa; }
+
 </style>
 </head>
 
 <body>
 
-<!-- 🎵 เพลง -->
+<!-- 🎵 เพลงพื้นหลัง -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/10/03/audio_8d6e7b5a3c.mp3?filename=soft-piano-ambient-113694.mp3">
 </audio>
 
-<!-- หน้าโหลด -->
-<div id="loading" class="page">
-  <div class="loader">🐰</div>
-  <h2>กำลังเตรียมความรู้สึกดี ๆ ให้เธอ…</h2>
-</div>
-
-<!-- หน้า 1 -->
-<div id="page1" class="page">
+<!-- Section 1 -->
+<section id="section1" class="section">
   <div class="cartoon">🌸</div>
-  <h1>ให้กำลังใจรุ่นน้องที่เราแอบชอบ</h1>
-  <p>
-    ไม่รู้ว่าเธอจะได้อ่านมันตอนไหน  
-    แต่เราอยากให้เธอรู้ว่า  
-    เธอเก่งมากแล้วนะ 💖
-  </p>
-  <button onclick="nextPage(2)">กดไปหน้าถัดไป 👉</button>
-</div>
+  <h1>สวัสดีรุ่นน้องที่น่ารัก 💖</h1>
+  <p>เราอยากให้คนอยู่ข้างหน้าอ่านอันนี้แล้วยิ้ม 😊</p>
+  <a href="#section2" class="btn">ให้กำลังใจต่อเลย 💪</a>
+</section>
 
-<!-- หน้า 2 -->
-<div id="page2" class="page">
-  <div class="cartoon">🐻</div>
+<!-- Section 2 -->
+<section id="section2" class="section">
+  <div class="cartoon">🐰✨</div>
+  <h2>เธอเก่งมากแล้วนะ</h2>
   <p>
-    ถ้าวันไหนเหนื่อย  
-    ถ้าวันไหนท้อ  
-    อย่าลืมว่ามีใครบางคน  
-    แอบเอาใจช่วยเธออยู่เสมอ 🌷
+    ไม่ว่าจะเหนื่อยแค่ไหน หรือวันไหนท้อ<br>
+    เราอยากให้รู้ไว้เธอทำได้แน่นอน 🌟
   </p>
-  <button onclick="nextPage(3)">ไปต่ออีกนิด 💕</button>
-</div>
+  <a href="#section3" class="btn">ไปต่ออีก ❤️</a>
+</section>
 
-<!-- หน้า 3 -->
-<div id="page3" class="page">
-  <div class="cartoon">⭐</div>
+<!-- Section 3 -->
+<section id="section3" class="section">
+  <div class="cartoon">⭐💫</div>
+  <h2>เก็บเป็นความทรงจำดี ๆ</h2>
   <p>
-    เว็บนี้ไม่ได้อยากให้อ่านแค่ครั้งเดียว  
-    แต่อยากให้เก็บไว้  
-    เป็นความทรงจำเล็ก ๆ  
-    ที่เปิดมาแล้วรู้สึกดี 😊
+    เปิดเว็บนี้เมื่อไหร่จงรู้ไว้ว่า<br>
+    มีใครบางคนที่อยากให้เธอยิ้มเสมอ 🥰
   </p>
-  <p>
-    ขอให้เธอเจอแต่เรื่องดี ๆ  
-    ในทุกวันที่เดินไปข้างหน้า 💖
+  <p style="margin-top: 30px; font-size: 1.2em; color: #ff2f73;">
+    💓 ขอบคุณที่เป็นเธอ<br>และขอบคุณที่อ่านอันนี้นะ 💖
   </p>
-</div>
-
-<script>
-setTimeout(() => {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("page1").style.display = "block";
-}, 2500);
-
-function nextPage(n) {
-  document.querySelectorAll('.page').forEach(p => p.style.display = "none");
-  document.getElementById("page" + n).style.display = "block";
-}
-</script>
+</section>
 
 </body>
 </html>
