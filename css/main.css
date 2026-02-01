@@ -1,0 +1,64 @@
+body{
+margin:0;
+font-family: 'Hiragino Sans', 'Segoe UI', sans-serif;
+background: linear-gradient(180deg,#fff0f6,#ffffff);
+color:#444;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:24px;
+text-align:center;
+background:rgba(255,255,255,0.7);
+backdrop-filter: blur(12px);
+z-index:100;
+}
+
+.logo{
+font-size:20px;
+letter-spacing:2px;
+color:#ff7eb6;
+font-weight:600;
+}
+
+/* PAGE */
+
+.page{
+padding-top:120px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* QUOTE CARD */
+
+.quote-card{
+max-width:720px;
+padding:60px 40px;
+background:white;
+border-radius:30px;
+box-shadow:0 20px 60px rgba(255,150,200,0.15);
+text-align:center;
+}
+
+.quote-text{
+font-size:26px;
+line-height:1.8;
+}
+
+.next-btn{
+margin-top:40px;
+padding:14px 40px;
+border-radius:999px;
+border:none;
+background:linear-gradient(90deg,#ff9ac6,#ff7eb6);
+color:white;
+font-size:16px;
+cursor:pointer;
+}
