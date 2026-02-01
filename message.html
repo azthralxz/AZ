@@ -5,29 +5,33 @@
 <title>Message</title>
 
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/transition.css">
+<link rel="stylesheet" href="css/animation.css">
+
+<script defer src="js/router.js"></script>
+<script defer src="js/app.js"></script>
+<script defer src="js/quotes.js"></script>
 </head>
 
 <body>
 
-<div id="loader"></div>
-<div id="navbar"></div>
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<nav class="navbar">
+  <div class="logo">ถึงคุณแค่คนเดียว</div>
+  <div class="nav-links">
+    <a data-link href="index.html">Home</a>
+    <a data-link href="message.html">Message</a>
+    <a data-link href="support.html">Support</a>
+    <a data-link href="safeplace.html">Safe Place</a>
+  </div>
+</nav>
 
 <main class="page">
-
-<section class="fade">
-<div class="card glass">
-<div class="emoji">🐰</div>
-<h2>Message</h2>
-<p>เธอพยายามได้ดีมากแล้วนะ</p>
-</div>
-</section>
-
+  <div class="quote-box" id="quoteBox"></div>
+  <button class="next-btn" onclick="nextQuote()">ต่อไป</button>
 </main>
-
-<script src="js/layout.js"></script>
-<script src="js/transition.js"></script>
-<script src="js/app.js"></script>
 
 </body>
 </html>
